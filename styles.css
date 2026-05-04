@@ -182,14 +182,62 @@ header {
 
 /* Hero Section */
 .hero {
+  position: relative;
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(10, 34, 64, 0.7), rgba(10, 34, 64, 0.7)), url('Imagenes/ejemplos/4.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
   color: var(--white);
   padding-top: 80px;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(rgba(10, 34, 64, 0.7), rgba(10, 34, 64, 0.7));
+  z-index: -1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hero-bg .bg-slide {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeBackground 15s infinite;
+}
+
+.hero-bg .bg-slide:nth-child(1) {
+  background-image: url('Imagenes/ejemplos/4.jpeg');
+  animation-delay: 0s;
+}
+
+.hero-bg .bg-slide:nth-child(2) {
+  background-image: url('Imagenes/ejemplos/44.png');
+  animation-delay: 5s;
+}
+
+.hero-bg .bg-slide:nth-child(3) {
+  background-image: url('Imagenes/ejemplos/444.png');
+  animation-delay: 10s;
+}
+
+@keyframes fadeBackground {
+  0%   { opacity: 0; transform: scale(1); }
+  10%  { opacity: 1; transform: scale(1.02); }
+  33%  { opacity: 1; transform: scale(1.05); }
+  43%  { opacity: 0; transform: scale(1.07); }
+  100% { opacity: 0; transform: scale(1.1); }
 }
 
 .hero-content {
@@ -540,7 +588,6 @@ footer {
 .footer-about img {
   height: 60px;
   margin-bottom: 20px;
-  filter: brightness(0) invert(1); /* Makes the logo white */
 }
 
 .footer-links h4, .footer-contact h4 {

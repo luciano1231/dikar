@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const destino = document.getElementById('destino').value;
             const fecha = document.getElementById('fecha').value;
             const tipo = document.getElementById('tipo').value;
+            const valor_declarado = document.getElementById('valor_declarado').value;
             const detalle = document.getElementById('detalle').value;
             
             // Format WhatsApp Message
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `*Ubicación de Entrega:* ${destino}\n`;
             message += `*Fecha estimada:* ${fecha || 'No especificada'}\n`;
             message += `*Tipo de carga:* ${tipo}\n`;
+            message += `*Valor declarado:* $${valor_declarado}\n`;
             message += `*Detalle:* ${detalle}\n\n`;
             message += `Por favor, envíenme una cotización. ¡Gracias!`;
             
