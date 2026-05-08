@@ -266,7 +266,7 @@ header {
   gap: 10px;
   background: rgba(230, 29, 36, 0.15);
   border: 1px solid rgba(230, 29, 36, 0.4);
-  border-radius: 50px;
+  border-radius: 8px;
   padding: 8px 20px;
   margin-bottom: 28px;
   font-family: 'Montserrat', sans-serif;
@@ -1000,7 +1000,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 40px;
     min-height: auto;
-    padding-bottom: 120px;
+    padding-bottom: 140px;
     padding-top: 30px;
   }
 
