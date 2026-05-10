@@ -217,17 +217,17 @@ header {
 }
 
 .hero-bg .bg-slide:nth-child(1) {
-  background-image: url('Imagenes/ejemplos/4.jpeg');
+  background-image: url('Imagenes/whatsapp/Selected/gpt7.png');
   animation-delay: 0s;
 }
 
 .hero-bg .bg-slide:nth-child(2) {
-  background-image: url('Imagenes/ejemplos/44.png');
+  background-image: url('Imagenes/whatsapp/Selected/gpt5.png');
   animation-delay: 5s;
 }
 
 .hero-bg .bg-slide:nth-child(3) {
-  background-image: url('Imagenes/ejemplos/444.png');
+  background-image: url('Imagenes/whatsapp/Selected/gpt3.png');
   animation-delay: 10s;
 }
 
