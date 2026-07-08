@@ -611,6 +611,26 @@ header {
   margin-bottom: 15px;
 }
 
+.service-card.featured {
+  border-bottom: 4px solid var(--primary-red);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-card.featured::before {
+  content: 'MÁS SOLICITADO';
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  background: var(--primary-red);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 5px 35px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  letter-spacing: 1px;
+}
+
 /* Tariffs/Promos */
 .tariffs {
   background-color: var(--text-light);
