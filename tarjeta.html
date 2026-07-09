@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones de Tarjeta de Presentación — Logística Di&Kar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-red: #E61D24;
+            --primary-blue: #0A2240;
+            --secondary-blue: #1A3A60;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-muted: #556b82;
+            --bg-light: #F4F6F9;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-actions {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header-actions h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .header-actions p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .designs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .design-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(10, 34, 64, 0.05);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .design-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            align-self: flex-start;
+            border-left: 4px solid var(--primary-red);
+            padding-left: 12px;
+        }
+
+        .btn-print {
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(230, 29, 36, 0.2);
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .btn-print:hover {
+            background-color: #c9171f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(230, 29, 36, 0.3);
+        }
+
+        /* Business Card Base (15x10cm landscape) */
+        .card {
+            width: 15cm;
+            height: 10cm;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(10, 34, 64, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(10, 34, 64, 0.08);
+        }
+
+
+        /* ==========================================
+           DISEÑO 1: TODO CLARO (ALL LIGHT)
+           ========================================== */
+        .card-all-light {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            padding: 1cm;
+            gap: 0.6cm;
+            align-items: center;
+        }
+
+        /* Border accents for light card */
+        .card-all-light::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 6px; height: 100%;
+            background-color: var(--primary-red);
+        }
+
+        .card-all-light .logo-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .card-all-light .logo-column img {
+            width: 75%;
+            height: auto;
+            max-height: 4.25cm;
+            object-fit: contain;
+        }
+
+        .card-all-light .divider-vertical {
+            position: absolute;
+            top: 1.5cm;
+            left: 54%;
+            width: 1px;
+            height: 7cm;
+            background-color: rgba(10, 34, 64, 0.08);
+        }
+
+        .card-all-light .info-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-left: 0.4cm;
+        }
+
+        .card-all-light .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--primary-blue);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.3cm;
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 4px;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .card-all-light .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25cm;
+            opacity: 0.8;
+        }
+
+        .card-all-light .services-list {
+            list-style: none;
+            margin-bottom: 0.4cm;
+        }
+
+        .card-all-light .services-list li {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.72rem;
+            color: var(--text-dark);
+            margin-bottom: 0.2cm;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-all-light .services-list li i {
+            color: var(--primary-red);
+            font-size: 0.75rem;
+            width: 12px;
+            text-align: center;
+        }
+
+        .card-all-light .contact-box {
+            background-color: var(--bg-light);
+            border-left: 3px solid var(--primary-blue);
+            padding: 0.3cm 0.4cm;
+            border-radius: 6px;
+        }
+
+        .card-all-light .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 0.2cm;
+        }
+
+        .card-all-light .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-all-light .contact-item i {
+            color: var(--primary-red);
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .card-all-light .contact-item .text {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .card-all-light .contact-item .text strong {
+            display: block;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .card-all-light .website {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+            text-align: right;
+            margin-top: 0.3cm;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .card-all-light .website:hover {
+            color: var(--primary-red);
+        }
+
+
+        /* ==========================================
+           DISEÑO 2: MITAD Y MITAD (SPLIT DESIGN)
+           ========================================== */
+        .card-split {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+        }
+
+        /* Left Half: Light Background with Logo */
+        .card-split .left-half {
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8cm;
+            position: relative;
+        }
+
+        .card-split .left-half img {
+            width: 85%;
+            height: auto;
+            max-height: 5.1cm;
+            object-fit: contain;
+        }
+
+        /* Red vertical divider stripe */
+        .card-split .divider-stripe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary-red);
+            z-index: 10;
+        }
+
+        /* Right Half: Dark Blue Background with Data */
+        .card-split .right-half {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #061528 100%);
+            color: var(--white);
+            padding: 1cm 1.2cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card-split .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--white);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.4cm;
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 4px;
+            display: inline-block;
+        }
+
+        .card-split .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.25cm;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 3px;
+        }
+
+        .card-split .services-list {
+            list-style: none;
+            margin-bottom: 0.4cm;
+        }
+
+        .card-split .services-list li {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.2cm;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-split .services-list li i {
+            color: var(--primary-red);
+            font-size: 0.75rem;
+            width: 12px;
+            text-align: center;
+        }
+
+        .card-split .contact-info {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.35cm 0.4cm;
+            border-radius: 8px;
+        }
+
+        .card-split .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 0.25cm;
+        }
+
+        .card-split .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-split .contact-item i {
+            color: var(--primary-red);
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        .card-split .contact-item .text {
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.3;
+        }
+
+        .card-split .contact-item .text strong {
+            display: block;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1px;
+        }
+
+        .card-split .website {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--white);
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 8px;
+            transition: var(--transition);
+        }
+
+        .card-split .website:hover {
+            color: var(--primary-red);
+        }
+
+
+        /* ==========================================
+           PRINT STYLES
+           ========================================== */
+        @media print {
+            body {
+                background-color: transparent;
+                padding: 0;
+            }
+
+            .header-actions, .design-title, .btn-print, .divider-vertical {
+                display: none !important;
+            }
+
+            .design-section {
+                padding: 0 !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+            }
+
+            .card {
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+            }
+
+            /* Hide the card that is NOT selected for printing */
+            .design-section:not(.active-print) {
+                display: none !important;
+            }
+
+            @page {
+                size: 15cm 10cm;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-actions">
+            <h1>Opciones de Tarjeta de Presentación (Frente Único)</h1>
+            <p style="margin-top: 5px;">Orientación horizontal: 15x10cm. Haz clic en "Imprimir" en la opción que más te guste.</p>
+        </div>
+
+        <div class="designs-grid">
+            
+            <!-- SECCIÓN DISEÑO 1: TODO CLARO -->
+            <div class="design-section" id="section-design-1">
+                <h2 class="design-title">Diseño 1: Fondo Todo Claro</h2>
+                
+                <div class="card card-all-light">
+                    <!-- Logo Column -->
+                    <div class="logo-column">
+                        <img src="Imagenes/Logo.png" alt="Logística Di&Kar">
+                    </div>
+                    
+                    <div class="divider-vertical"></div>
+                    
+                    <!-- Info Column -->
+                    <div class="info-column">
+                        <div>
+                            <div class="brand-name">Di&Kar Distribuciones</div>
+                            <h4 class="section-title">Servicios</h4>
+                            <ul class="services-list">
+                                <li><i class="fas fa-truck"></i> Fletes Generales</li>
+                                <li><i class="fas fa-home"></i> Mudanzas Especiales</li>
+                                <li><i class="fas fa-box"></i> Encomiendas y Bultos</li>
+                                <li><i class="fas fa-warehouse"></i> Guardamuebles y Depósito</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div class="contact-box">
+                                <div class="contact-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <div class="text">
+                                        <strong>WhatsApp Corrientes</strong>
+                                        +54 9 3795 02-2721
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="text">
+                                        <strong>Dirección Corrientes</strong>
+                                        Lila Soto 6665
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://www.logisticadikar.com.ar" class="website" target="_blank">www.logisticadikar.com.ar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-print" onclick="printCard('section-design-1')">
+                    <i class="fas fa-print"></i> Imprimir Diseño 1 / PDF
+                </button>
+            </div>
+
+
+            <!-- SECCIÓN DISEÑO 2: MITAD Y MITAD -->
+            <div class="design-section" id="section-design-2">
+                <h2 class="design-title">Diseño 2: Mitad Claro / Mitad Oscuro</h2>
+                
+                <div class="card card-split">
+                    <!-- Left Half: Light Background + Logo -->
+                    <div class="left-half">
+                        <img src="Imagenes/Logo.png" alt="Logística Di&Kar">
+                        <div class="divider-stripe"></div>
+                    </div>
+                    
+                    <!-- Right Half: Dark Background + Info -->
+                    <div class="right-half">
+                        <div>
+                            <div class="brand-name">DI&KAR DISTRIBUCIONES</div>
+                            <h4 class="section-title">Servicios</h4>
+                            <ul class="services-list">
+                                <li><i class="fas fa-truck"></i> Fletes Generales</li>
+                                <li><i class="fas fa-home"></i> Mudanzas Especiales</li>
+                                <li><i class="fas fa-box"></i> Encomiendas y Bultos</li>
+                                <li><i class="fas fa-warehouse"></i> Guardamuebles y Depósito</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <div class="text">
+                                        <strong>WhatsApp Corrientes</strong>
+                                        +54 9 3795 02-2721
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="text">
+                                        <strong>Dirección Corrientes</strong>
+                                        Lila Soto 6665
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://www.logisticadikar.com.ar" class="website" target="_blank">www.logisticadikar.com.ar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-print" onclick="printCard('section-design-2')">
+                    <i class="fas fa-print"></i> Imprimir Diseño 2 / PDF
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function printCard(sectionId) {
+            // Remove active-print class from all sections
+            document.querySelectorAll('.design-section').forEach(section => {
+                section.classList.remove('active-print');
+            });
+            // Add active-print class to the selected section to print only this card
+            document.getElementById(sectionId).classList.add('active-print');
+            window.print();
+        }
+    </script>
+
+</body>
+</html>
