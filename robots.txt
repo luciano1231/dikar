@@ -3,4 +3,4 @@ Allow: /
 Disallow: /tarjeta.html
 Disallow: /Imagenes/Dikar%20Logo%20Original.pdf
 
-Sitemap: https://www.logisticadikar.com.ar/sitemap.xml
+Sitemap: https://logisticadikar.com.ar/sitemap.xml
