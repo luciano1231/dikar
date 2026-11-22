@@ -6,6 +6,26 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/mudanzas-caba-corrientes/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/fletes-buenos-aires-resistencia/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/encomiendas-caba-corrientes/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/guardamuebles-corrientes/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/carga-pallets-m3/
   Cache-Control: public, max-age=0, must-revalidate
 
 /Imagenes/*
